@@ -18,7 +18,7 @@ app.listen(PORT, () => console.log(`Server Running {PORT}`));
 //Server Production assests
 
   app.use(express.static(path.join(__dirname,"./Client/build")));
-  app.get("*",(req, res) => {res.sendFile(path.resolve(__dirname,"./Client/build/index.html"))});
+  app.get("*",(req, res) => {res.sendFile(path.resolve(__dirname,"Client","build","index.html"));});
 
 
 // Static folder
